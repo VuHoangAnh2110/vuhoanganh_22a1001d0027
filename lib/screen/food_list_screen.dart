@@ -1,4 +1,5 @@
 import 'dart:io';
+import '/screen/food_form_screen.dart';
 import '/screen/food_form_dialog.dart';
 import 'package:flutter/material.dart';
 import '/database/database_helper.dart';
@@ -24,10 +25,22 @@ class _FoodListScreenState extends State<FoodListScreen> {
     });
   }
 
+  // Hiện thị dạng dialog để nhập thông tin 
   void _addOrEditFood({Map<String, dynamic>? food}) async {
     final result = await showDialog(
       context: context,
       builder: (context) => FoodFormDialog(food: food),
+    );
+    if (result == true) {
+      _loadFoods();
+    }
+  }
+
+  // Hiển thị một trang mới để nhập thông tin
+   void _addOrEditFood1({Map<String, dynamic>? food}) async {
+    final result = await Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => FoodFormScreen(food: food)),
     );
     if (result == true) {
       _loadFoods();
@@ -68,7 +81,7 @@ class _FoodListScreenState extends State<FoodListScreen> {
               },
             ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => _addOrEditFood(),
+        onPressed: () => _addOrEditFood1(),
         child: Icon(Icons.add),
         backgroundColor: Colors.blue,
       ),
