@@ -33,8 +33,8 @@ Dự án này là một ứng dụng Flutter giúp quản lý danh sách món ă
 ### Cách Chạy Dự Án
 1. Clone repo:
    ```sh
-   git clone https://github.com/your-repo/flutter-food-manager.git
-   cd flutter-food-manager
+   git clone https://github.com/VuHoangAnh2110/vuhoanganh_22a1001d0027.git
+   cd vuhoanganh_22a1001d0027
    ```
 2. Cài đặt package:
    ```sh
