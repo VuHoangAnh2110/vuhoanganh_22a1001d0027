@@ -13,6 +13,7 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
+----------------------------------------
 # Quản Lý Món Ăn - Flutter App
 
 ## Giới Thiệu
@@ -80,7 +81,7 @@ flutter-food-manager/
 - `image_picker` - Chọn hình ảnh từ thư viện
 
 ## Liên Hệ
-Tác giả: [Your Name]
-GitHub: [Your Repo]
-Email: your-email@example.com
+Tác giả: [VHAnh]
+GitHub: [vuhoanganh_22a1001d0027]
+Email: vhanh2k4@example.com
 
