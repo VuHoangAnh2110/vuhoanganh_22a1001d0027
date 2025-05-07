@@ -86,7 +86,17 @@ class _FoodFormScreenState extends State<FoodFormScreen> {
               TextFormField(
                 controller: _priceController,
                 decoration: InputDecoration(labelText: "Giá"),
-                validator: (value) => value!.isEmpty ? "Nhập giá" : null,
+                keyboardType: TextInputType.number, // Đảm bảo nhập số
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Nhập giá";
+                  }
+                  final price = double.tryParse(value);
+                  if (price == null || price < 0) {
+                    return "Giá phải là số và không được nhỏ hơn 0";
+                  }
+                  return null;
+                },
               ),
               TextFormField(
                 controller: _unitController,
